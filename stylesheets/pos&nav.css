@@ -103,3 +103,15 @@ a{
 	color:#FFF;
 	background:#C81623;
 }
+/*****************************************************
+	IE6 hack
+ *****************************************************/
+*html #nav{
+	position:absolute;
+	top:expression(((s=document.documentElement.scrollTop)? s : document.body.scrollTop) + 100 + 'px');
+}
+/* 解决上方hack导致的IE6下定位导航条闪烁问题 */
+*html,*html body{
+	background-image:url(about:black);
+	background-attachment:fixed;
+}
